@@ -3,31 +3,105 @@
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                    <h4 class="card-title">Reporte</h4>
+                </div>
+            </div>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+            <div class="col-sm-12">
+                <div class="card">
+                    @* <div class="card-header d-flex justify-content-between">
+            <div class="header-title">
+            <h4 class="card-title">Tabla de Usuarios</h4>
+            </div>
+            </div> *@
+                    <div id="toolbar_orders_authorization">
+
+                        <button id="addUser" class="btn btn-outline-success" title="Agregar un usuario nuevo"
+                                onclick="shoAddModal()">
+                             @*<i class="fa fa-list"></i>*@  
+                            Agregar Usuario
+                        </button>
+
+                    </div>
+
+                    <div class="card-body p-0">
+                        <div class="table-responsive p-3">
+                            <table id="users-table" class="table table-striped mb-0" data-search="true"
+                                   data-locale="es-MX" data-show-fullscreen="true" data-show-columns="true"
+                                   data-show-columns-toggle-all="true" data-show-export="true" data-click-to-select="true"
+                                   data-detail-formatter="detailFormatter" data-minimum-count-columns="2"
+                                   data-pagination="true" data-id-field="id" data-page-list="[10, 25, 50, 100, all]"
+                                   data-remember-order="true" data-toolbar="#toolbar_orders_authorization"
+                                   data-auto-refresh="true" data-fixed-scroll="true" data-show-refresh="true" >
+                                <thead>
+                                    <tr>
+                                        <th data-field="sku">SKU </th>
+                                        <th data-field="itemcode">Código SAP</th>
+                                        <th data-field="description">Descripción</th>
+                                        <th data-field="manufacturer">Fabricante</th>
+                                        <th data-field="brand" data-Formatter="operateFormatterRol">Marca</th>
+                                        <th data-field="whs01">Almacén GLD</th>
+                                        <th data-field="whs02">Almacén CDMX</th>
+                                        <th data-field="whs03">Almacén MTY</th>
+                                        <th data-field="whs05">Almacén SALT</th>
+
+                                        @*<th data-Formatter="operateFormatter" data-events="operateEvents"
+        data-switchable="false">Acciones</th>*@
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
+
+<script>
+    var $table = $('#users-table')
+
+    $(function () {
+        var data = [
+            {
+                "sku": "SKU001",
+                "itemcode": "ITEM001",
+                "description": "Producto A",
+                "brand": "Marca A",
+                "manufacturer": "Fabricante A",
+                "whs01": 100,
+                "whs02": 200,
+                "whs03": 300,
+                "whs05": 20
+            },
+            {
+                "sku": "SKU002",
+                "itemcode": "ITEM002",
+                "description": "Producto B",
+                "brand": "Marca B",
+                "manufacturer": "Fabricante B",
+                "whs01": 50,
+                "whs02": 80,
+                "whs03": 120,
+                "whs05": 15
+            },
+            {
+                "sku": "SKU003",
+                "itemcode": "ITEM003",
+                "description": "Producto C",
+                "brand": "Marca C",
+                "manufacturer": "Fabricante C",
+                "whs01": 30,
+                "whs02": 60,
+                "whs03": 90,
+                "whs05": 9
+            }
+        ]
+
+        $table.bootstrapTable({ data: data })
+    })
+</script>

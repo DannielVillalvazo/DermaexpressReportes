@@ -15,7 +15,30 @@ function handleLogin(event) {
 
     console.log("user", user)
     console.log("password", password)
+
+    userAuth(user, password)
+        .then(data => { 
+            if (!data.Success) {
+                console.log("Data recibida:", data)
+                mymessage("error", data.Result.Description)
+                return 
+            } 
+
+            const userJson = {
+                user,
+            }
+
+            // Almacenar Usuario en LocalStorage
+            localStorage.setItem("myUser", JSON.stringify(userJson))
+            mymessage("success", "Bienvenido!")
+            // Redireccionar al Home
+            window.location.href = "/Home/Index";
+             
+            
+        })
+        .catch(error => console.error("Error:", error));
    
-    mymessage("success", "Bienvenido!")
+
+    
      
 }

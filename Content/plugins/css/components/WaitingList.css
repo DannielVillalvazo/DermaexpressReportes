@@ -1,0 +1,180 @@
+﻿
+.containerRoom{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.medicalRoom{
+  float: left;
+  width: 134px;
+  height: 50px !important;
+  padding: 5px;
+  margin: 10px;
+  background: rgba(191, 191, 191,.1);
+  box-shadow: 2px 0px 9px 0px;
+}
+
+.patientWaiting{
+  float: left;
+  width: 164px;
+  min-width: 164px;
+  /* height: auto !important; */
+  height: 50px !important;
+  padding: 5px;
+  margin: 10px;
+  background: rgba(191, 191, 191,.1);
+  box-shadow: 2px 0px 9px 0px;
+}
+
+.hmr {
+  height: auto !important;    
+}
+
+.medicalRoom hr{
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+.medicalRoom h2{
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.medicalRoom h3{
+  font-size: 10px;
+  text-overflow: ellipsis;
+}
+.patientWaiting hr{
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+.patientWaiting h2{
+  font-weight: bold;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.patientWaiting h3{
+  font-size: 13px;
+  text-overflow: ellipsis;
+}
+
+.advance-buttons{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-flow: row;
+}
+
+.prev-btn,
+.next-btn {
+  width: 3vw;
+  height: 10rem;
+  position: relative;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  border: none;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waitingListPatient {
+  margin-top: -11rem;
+}
+
+.prev-btn {
+  left: 0;
+  transform: rotate(180deg);
+  margin-left: -2rem;
+}
+
+.next-btn {
+  right: 0;
+  margin-right: -2rem;
+}
+
+.prev-btn img,
+.next-btn img {
+  opacity: 0.2;
+}
+
+.prev-btn:hover img,
+.next-btn:hover img {
+  opacity: 1;
+  margin-left: 10px;
+}
+
+#cuadro2 {
+  background: #5f5;
+}
+
+/*************************************** [ OJO PARA VER EL DETALLE ] ***************************************/
+.label-eye
+ {
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-eye {
+  position: absolute;
+  opacity: 0;
+}
+
+.eye-open {
+  position: absolute;
+  font-size: 1.5em;
+  color: #666;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+  transform: scale(0);
+  transition: 1s ease;
+}
+
+.input-eye:checked ~ .eye-open {  
+  transition-delay: .8s;
+  transform: scale(1); 
+}
+
+.eye-close {
+  font-size: 2em;
+  color: #666;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+  transition: 1s ease;
+  transition-delay: .8s;
+}
+
+.input-eye:checked ~ .eye-close {
+  transition-delay: 0s;
+  transform: scale(0);
+}
+
+.toggle {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #2b2b2b;
+  border-radius: 50%;
+  box-shadow: inset 0 8px 60px rgba(0,0,0,.1), inset 0 8px 8px rgba(0,0,0,.1), inset 0 -4px 4px rgba(0,0,0,.1);
+  z-index: -1;
+}
+
+.input-eye:checked ~ .toggle {
+  background: #f8f8f8;
+}
+
+/*************************************** [ OJO PARA VER EL DETALLE FIN ] ***************************************/
+
+/*************************************** [ MENU EN LAS OPCIONES DE LAS TARJETAS ] ***************************************/
+.options-menu{
+  position: absolute;
+  float: right;
+  margin-left: 102px;
+  margin-top: -20px;
+}
+/*************************************** [ MENU EN LAS OPCIONES DE LAS TARJETAS FIN ] ***************************************/
+
