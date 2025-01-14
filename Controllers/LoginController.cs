@@ -9,6 +9,11 @@ namespace dermaexpressReporte.Controllers
 {
     public class LoginController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         [HttpGet]
         [Route("GetLogin")]
         public JsonResult GetLogin(string sUser, string sPass)
