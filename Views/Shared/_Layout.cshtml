@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title data-setting="app_name" data-rightJoin=" Pro | Responsive Bootstrap 5 Admin Dashboard Template">Hope UI Pro | Responsive Bootstrap 5 Admin Dashboard Template</title>
+    <title data-setting="app_name">Hope UI Pro | Responsive Bootstrap 5 Admin Dashboard Template</title>
     <meta name="description" content="Hope UI Pro is a revolutionary Bootstrap Admin Dashboard Template and UI Components Library. The Admin Dashboard Template and UI Component features 8 modules.">
     <meta name="keywords" content="premium, admin, dashboard, template, bootstrap 5, clean ui, hope ui, admin dashboard,responsive dashboard, optimized dashboard,">
     <meta name="author" content="Iqonic Design">
@@ -102,9 +102,9 @@
                             <span class="mini-icon" data-bs-toggle="tooltip" title="Home" data-bs-placement="right">-</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li id="reportLink" class="nav-item">
                         <a class="nav-link " aria-current="page"
-                           href="../../dashboard/index.html">
+                           href="../../Home/index">
                             <i class="icon" data-bs-toggle="tooltip" title="Report" data-bs-placement="right">
                                 <svg width="20" class="icon-20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path opacity="0.4"
@@ -167,8 +167,10 @@
 
 
                             <li class="nav-item dropdown" id="itemdropdown1">
+
                                 <a class="py-0 nav-link d-flex align-items-center " href="#" id="navbarDropdown" role="button"
                                    data-bs-toggle="dropdown" aria-expanded="false">
+
                                     <div class="btn btn-primary btn-icon btn-sm rounded-pill btn-action">
                                         <span class="btn-inner">
                                             <svg class="icon-32" width="32" viewBox="0 0 24 24" fill="none"
@@ -184,7 +186,7 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
-                                        <a class="dropdown-item" href="../../dashboard/auth/sign-in.html">Cerrar Sesión</a>
+                                        <a class="dropdown-item" onclick="handleLogOut()">Cerrar Sesión</a>
                                     </li>
                                 </ul>
                             </li>
@@ -198,8 +200,8 @@
                         <div class="col-md-12">
                             <div class="flex-wrap d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h1>Administración del Reporte!</h1>
-                                    <p>En este modulo podrás visualizar el reporte generado por el aplicativo.</p>
+                                    <h1 id="titleHeader">NA</h1>
+                                    <p id="descriptionHeader">NA</p>
                                 </div>
                                 @*<div>
                                         <a href="" class="btn btn-link btn-soft-light">
@@ -1201,7 +1203,16 @@
         </div>
     </div>
 
-
+    <!-- JS Auth -->
+    <script src="~/assets/js/login/auth.js"></script>
+    <!-- JS sweetalert2 -->
+    <script src="~/assets/js/sweetalert/sweetalert2@11.js"></script>
+    <!-- JS Messages -->
+    <script src="~/assets/js/alerts/messages.js"></script>
+    <!-- JS Config -->
+    <script src="~/assets/js/config.js"></script>
+    <!-- JS Env -->
+    <script src="~/assets/js/env.js"></script>
     <!-- Bootstrap Table -->
     <script src="~/Content/plugins/js/plugins/bootstrap-table.min.js"></script>
     <script src="~/Content/plugins/js/plugins/tableExport.min.js"></script>
@@ -1217,7 +1228,7 @@
     <!-- Plugin Scripts -->
     <!-- Slider-tab Script -->
     <script src="../../assets/js/plugins/slider-tabs.js"></script>
-     
+
     <!-- Lodash Utility -->
     <script src="../../assets/vendor/lodash/lodash.min.js"></script>
     <!-- Utilities Functions -->

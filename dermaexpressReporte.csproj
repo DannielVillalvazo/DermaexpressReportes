@@ -387,6 +387,8 @@
     <Content Include="assets\js\dual-tone-icon-search-filter.js" />
     <Content Include="assets\js\hope-ui.js" />
     <Content Include="assets\js\hope-uipro.js" />
+    <Content Include="assets\js\inventory\tableInventory.js" />
+    <Content Include="assets\js\inventory\requestInventory.js" />
     <Content Include="assets\js\iqonic-script\setting-bundel.js" />
     <Content Include="assets\js\iqonic-script\setting-bundel.min.js" />
     <Content Include="assets\js\iqonic-script\setting.js" />

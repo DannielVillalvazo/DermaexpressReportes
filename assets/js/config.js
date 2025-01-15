@@ -1,19 +1,11 @@
-console.log("entro")
-//Global
-const myUser = JSON.parse(localStorage.getItem("user"));
-const whsLS = JSON.parse(localStorage.getItem("whs"));
-
+//Global 
+const myUser = JSON.parse(localStorage.getItem("myUser")); 
 
 // Seleccionar enlaces por ID
-const dashboardLink = document.getElementById('dashboardLink');
-const usersLink = document.getElementById('usersLink');
-const taskLink = document.getElementById('taskLink');
-const UserCounts = document.getElementById('UserCounts');
-const Reports = document.getElementById('Reports');
-const History = document.getElementById('ReportsHistory');
+const reportLink = document.getElementById('reportLink'); 
 
 // Validar que el usuario este Logeado
-if (myUser && window.location.pathname === "/") myUser.id_role !== 2 ? window.location.href = "/home/index" : window.location.href = "/UserCounts/UserCounts";
+if (myUser && window.location.pathname === "/") window.location.href = "/home/index";
 if (!myUser && window.location.pathname !== "/") window.location.href = "/";
 
 // Obtener la URL actual
@@ -28,34 +20,15 @@ const textDescription = document.getElementById("descriptionHeader")
 
 
 const cleanClass = () => {
-    usersLink.classList.remove('active');
-    dashboardLink.classList.remove('active');
-    taskLink.classList.remove('active');
-    UserCounts.classList.remove('active');
-    Reports.classList.remove('active');
-    History.classList.remove('active');
+    usersLink.classList.remove('active'); 
 }
-
-// cleanClass()  
+ 
 // Verificar la ruta y agregar el 'active' solo al enlace correspondiente
-if (currentPath.includes('/home/index')) {
-    // cleanClass() 
+if (currentPath.includes('/home/index') || currentPath.includes('/Home/Index') || currentPath.includes("/Home/index")) {  
+    textHeader.textContent = "Administraci\u00f3n del Reporte" 
+    textDescription.textContent = "En este modulo podr\u00e1s visualizar el reporte generado por el aplicativo."
 
-    dashboardLink.classList.add('active');
-    if (navbarHeader) {
-        navbarHeader.style.display = "none";
-    } 
+    reportLink.classList.add('active');
+     
 }  
-
-
-const homePage = () => {
-
-    console.log('user', myUser)
-    if (!myUser) {
-        window.location.href = "/";
-        //return
-    }
-
-
-} 
-
+ 

@@ -49,7 +49,7 @@
  - position: STICKY;
  - bottom: 0;
  * ***/
- (function (window) {
+(function (window) { 
   // Listners for Customizer
 
   const selectors = {
@@ -222,6 +222,7 @@
         value: "Inter",
       },
     };
+
   }
 
   /**************************************************************************

@@ -20,7 +20,7 @@ function handleLogin(event) {
         .then(data => { 
             if (!data.Success) {
                 console.log("Data recibida:", data)
-                mymessage("error", data.Result.Description)
+                mymessage("error", data.Error.Description)
                 return 
             } 
 
@@ -41,4 +41,11 @@ function handleLogin(event) {
 
     
      
+}
+
+
+function handleLogOut() {
+
+    localStorage.removeItem("myUser");
+    window.location.href = "/";
 }
