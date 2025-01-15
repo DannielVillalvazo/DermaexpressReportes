@@ -46,6 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Sap.Data.Hana.v4.5, Version=2.7.26.0, Culture=neutral, PublicKeyToken=0326b8ea63db4bc4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\sap\hdbclient\ado.net\v4.5\Sap.Data.Hana.v4.5.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -122,15 +126,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Functions\Inventory.cs" />
     <Compile Include="Functions\LoginFunction.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Conflict.cs" />
     <Compile Include="Models\Globals.cs" />
+    <Compile Include="Models\Items.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\bd\bd_dermaexpress.txt" />
@@ -2345,168 +2356,10 @@
     <Content Include="assets\vendor\zuck.js-master\LICENSE" />
     <Content Include="assets\vendor\zuck.js-master\package.json" />
     <Content Include="assets\vendor\zuck.js-master\README.md" />
-    <Content Include="Content\plugins\css\maps\custom.min.css.map" />
-    <Content Include="Content\plugins\css\maps\customizer.min.css.map" />
-    <Content Include="Content\plugins\css\maps\dark.min.css.map" />
-    <Content Include="Content\plugins\css\maps\hope-ui.min.css.map" />
-    <Content Include="Content\plugins\css\maps\rtl.min.css.map" />
-    <Content Include="Content\plugins\data-emoji.json" />
-    <Content Include="Content\plugins\vendor\3d\Shoes.gltf" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ach\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\af\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ak\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\an\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ar\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ast\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\as\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\az\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\be\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\bg\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\bn-BD\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\bn-IN\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\br\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\bs\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ca\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\csb\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\cs\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\cy\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\da\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\de\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\el\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\en-GB\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\en-US\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\en-ZA\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\eo\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\es-AR\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\es-CL\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\es-ES\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\es-MX\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\et\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\eu\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\fa\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ff\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\fi\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\fr\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\fy-NL\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ga-IE\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\gd\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\gl\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\gu-IN\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\he\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\hi-IN\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\hr\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\hu\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\hy-AM\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\id\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\is\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\it\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ja\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ka\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\kk\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\km\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\kn\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ko\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ku\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\lg\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\lij\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\locale.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\lt\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\lv\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\mai\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\mk\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ml\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\mn\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\mr\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ms\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\my\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\nb-NO\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\nl\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\nn-NO\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\nso\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\oc\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\or\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\pa-IN\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\pl\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\pt-BR\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\pt-PT\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\rm\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ro\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ru\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\rw\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sah\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\si\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sk\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sl\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\son\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sq\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sr\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sv-SE\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\sw\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ta-LK\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ta\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\te\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\th\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\tl\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\tn\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\tr\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\uk\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\ur\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\vi\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\wo\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\xh\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\zh-CN\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\zh-TW\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\locale\zu\viewer.properties" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\pdf.js.map" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\pdf\pdf.worker.js.map" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\PPTXjs\~%24Sample_11.pptx" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\PPTXjs\~%24Sample_12.pptx" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\PPTXjs\~%24Sample_video.pptx" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\SheetJS\del\handsontable\dist\handsontable.css.map" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\SheetJS\del\handsontable\dist\handsontable.js.map" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\SheetJS\del\handsontable\dist\pikaday\LICENSE" />
-    <Content Include="Content\plugins\vendor\doc-viewer\include\SheetJS\del\handsontable\dist\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\bootstrap\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\bootstrap\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\core\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\core\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\daygrid\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\daygrid\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\google-calendar\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\google-calendar\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\interaction\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\interaction\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\list\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\list\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\luxon\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\luxon\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\moment-timezone\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\moment-timezone\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\moment\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\moment\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\rrule\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\rrule\README.md" />
-    <Content Include="Content\plugins\vendor\fullcalendar\timegrid\package.json" />
-    <Content Include="Content\plugins\vendor\fullcalendar\timegrid\README.md" />
-    <Content Include="Content\plugins\vendor\language\english.json" />
-    <Content Include="Content\plugins\vendor\language\french.json" />
-    <Content Include="Content\plugins\vendor\language\german.json" />
-    <Content Include="Content\plugins\vendor\language\hindi.json" />
-    <Content Include="Content\plugins\vendor\language\japanese.json" />
-    <Content Include="Content\plugins\vendor\Leaflet\leaflet-src.esm.js.map" />
-    <Content Include="Content\plugins\vendor\Leaflet\leaflet-src.js.map" />
-    <Content Include="Content\plugins\vendor\Leaflet\leaflet.js.map" />
-    <Content Include="Content\plugins\vendor\quill\quill.min.js.map" />
-    <Content Include="Content\plugins\vendor\sticky-sidebar\dist\jquery.sticky-sidebar.js.map" />
-    <Content Include="Content\plugins\vendor\sticky-sidebar\dist\sticky-sidebar.js.map" />
-    <Content Include="Content\plugins\vendor\sticky-sidebar\LICENSE.md" />
-    <Content Include="Content\plugins\vendor\sticky-sidebar\package.json" />
-    <Content Include="Content\plugins\vendor\sticky-sidebar\README.md" />
-    <Content Include="Content\plugins\vendor\zuck.js-master\FUNDING.yml" />
-    <Content Include="Content\plugins\vendor\zuck.js-master\jsconfig.json" />
-    <Content Include="Content\plugins\vendor\zuck.js-master\LICENSE" />
-    <Content Include="Content\plugins\vendor\zuck.js-master\package.json" />
-    <Content Include="Content\plugins\vendor\zuck.js-master\README.md" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
