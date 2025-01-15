@@ -46,10 +46,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Sap.Data.Hana.v4.5, Version=2.7.26.0, Culture=neutral, PublicKeyToken=0326b8ea63db4bc4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\sap\hdbclient\ado.net\v4.5\Sap.Data.Hana.v4.5.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -126,22 +122,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Functions\Inventory.cs" />
     <Compile Include="Functions\LoginFunction.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Conflict.cs" />
     <Compile Include="Models\Globals.cs" />
-    <Compile Include="Models\Items.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\bd\bd_dermaexpress.txt" />
@@ -2356,10 +2345,6 @@
     <Content Include="assets\vendor\zuck.js-master\LICENSE" />
     <Content Include="assets\vendor\zuck.js-master\package.json" />
     <Content Include="assets\vendor\zuck.js-master\README.md" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGnOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <Content Include="Content\plugins\css\maps\custom.min.css.map" />
     <Content Include="Content\plugins\css\maps\customizer.min.css.map" />
     <Content Include="Content\plugins\css\maps\dark.min.css.map" />

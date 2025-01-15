@@ -18,7 +18,7 @@ namespace dermaexpressReporte.Controllers
         [Route("GetLogin")]
         public JsonResult GetLogin(string sUser, string sPass)
         {
-            Response<UserLogin> oRespuesta = new Response<UserLogin>();
+            Response<Conflict> oRespuesta = new Response<Conflict>();
             oRespuesta = Functions.LoginFunction.LoginValidate(sUser, sPass);
 
             return Json(oRespuesta, JsonRequestBehavior.AllowGet);
