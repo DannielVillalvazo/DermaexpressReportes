@@ -1,5 +1,4 @@
-﻿using dermaexpressReporte.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,19 +25,6 @@ namespace dermaexpressReporte.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-
-        [HttpGet]
-        [Route("GetItems")]
-        public JsonResult GetItems()
-        {
-            Response<List<Items>> oResponse = new Response<List<Items>>();
-
-            // Obtener primero los articulos con base a los campos
-            oResponse = Functions.Inventory.GetSAPInventory();
-            
-            //oRespuestaArticulos.Error = lsItems;
-            return Json(oResponse, JsonRequestBehavior.AllowGet);
         }
     }
 }
