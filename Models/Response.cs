@@ -10,7 +10,11 @@ namespace dermaexpressReporte.Models
     {
         [JsonProperty("Success")]
         public bool Success { get; set; }
-        [JsonProperty("Result")]
-        public T Result { get; set; }
+
+        [JsonProperty("Error")]
+        public Conflict Error { get; set; }
+
+        [JsonProperty("Data")]
+        public T Data { get; set; }
     }
 }
