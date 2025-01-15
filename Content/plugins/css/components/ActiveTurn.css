@@ -1,0 +1,55 @@
+﻿.label-turn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-turn {
+    position: absolute;
+    opacity: 0;
+}
+
+.sun {
+    position: absolute;
+    font-size: 1.5em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+    transform: scale(0);
+    transition: 1s ease;
+}
+
+.input-turn:checked ~ .sun {
+    transition-delay: .8s;
+    transform: scale(1) rotate(360deg);
+}
+
+.moon {
+    font-size: 2em;
+    color: #666;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,.5));
+    transition: 1s ease;
+    transition-delay: .8s;
+}
+
+.input-turn:checked ~ .moon {
+    transition-delay: 0s;
+    transform: rotate(360deg) scale(0);
+}
+
+.toggle {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    box-shadow: inset 0 8px 60px rgba(0,0,0,.1), inset 0 8px 8px rgba(0,0,0,.1), inset 0 -4px 4px rgba(0,0,0,.1);
+    z-index: -1;
+}
+
+.input-turn:checked ~ .toggle {
+    background: #f8f8f8;
+}

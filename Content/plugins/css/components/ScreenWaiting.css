@@ -1,0 +1,120 @@
+﻿html, body{
+    height:100%;
+    margin: 0;
+    overflow: hidden;
+}
+main{
+    min-width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    background-color: #2B478B;
+    min-height: 9rem;
+}
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.patientViews{
+    min-width: 19rem;
+    background-color: #2B478B;
+}
+.videoView{
+    display: flex;
+    flex-direction: column;
+}
+#clinicVideo{
+    width: 100%;
+    opacity: 1;
+}
+.notification{
+    position: absolute;
+    background-color: black;
+    min-width: 75rem;
+    min-height: 25rem;
+    max-width: 50rem;
+    max-height: 25rem;
+    margin-top: 13%;
+    margin-left: 15%;
+    opacity: 1;
+    border: 3px solid white;
+    padding: 2rem;
+    border-radius: 0rem  5rem 0rem 5rem;
+}
+.notification > h2{
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F47A0D;
+    text-shadow: -1px 1px 0 #F47A0D,
+        1px 1px 0 #F47A0D,
+        1px -1px 0 #F47A0D,
+        -1px -1px 0 #F47A0D;
+    transition: opacity 2s;
+}
+.show-ad{
+    opacity: 1 !important;
+}
+
+.hide-ad{    
+    opacity: 0 !important;
+}
+
+
+#btn-ready {
+    font-weight: bold !important;
+    text-transform: uppercase;
+    font-family: inherit;
+    display: inline-block;
+    width: 9em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #2B478B;
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #2B478B;
+}
+
+
+#btn-ready:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: rgb(203, 213, 224);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+#btn-ready:hover {
+    color: white !important;
+}
+   
+#btn-ready:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+}
+   
+#btn-ready:hover:before {
+    top: -30px;
+    left: -30px;
+}
+   
+#btn-ready:active:before {
+    background: #2B478B;
+    transition: background 0s;
+}

@@ -1,0 +1,5 @@
+﻿.news{
+    font-size: 18px !important;
+    color: var(--bs-primary) !important;
+    font-weight: bold !important;
+}

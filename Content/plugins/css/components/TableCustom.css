@@ -1,0 +1,193 @@
+﻿div {
+    display: block;
+}
+/* CORTE DE CAJA */
+.makeStyles-grid_left-16 {
+    border: 2px solid #000;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+    margin-top: 10px;
+    background-color: #fff;
+}
+.makeStyles-label-7 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.makeStyles-label_title_descripcion-9 {
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.makeStyles-label_cells-12 {
+    font-size: 12px;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.MuiGrid-grid-xs-3 {
+    flex-grow: 0;
+    max-width: 25%;
+    flex-basis: 25%;
+}
+.MuiGrid-grid-xs-8 {
+    flex-grow: 0;
+    max-width: 66.666667%;
+    flex-basis: 66.666667%;
+}
+.MuiGrid-grid-xs-6 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+.MuiGrid-grid-xs-9 {
+    flex-grow: 0;
+    max-width: 75%;
+    flex-basis: 75%;
+}
+.MuiGrid-grid-xs-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.makeStyles-label_cells_concepto-13 {
+    font-size: 12px;
+    margin-top: 0px;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+.makeStyles-label_title_entradas-11 {
+    color: #000000;
+    font-size: 13px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1px;
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
+.makeStyles-label_cells_total-14 {
+    font-size: 12px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.MuiGrid-grid-xs-4 {
+    flex-grow: 0;
+    max-width: 33.333333%;
+    flex-basis: 33.333333%;
+}
+/* CORTE DE CAJA FIN */
+
+.customp {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.MuiGrid-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.MuiGrid-grid-xs-12 {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.MuiGrid-grid-xs-true {
+    flex-grow: 1;
+    max-width: 100%;
+    flex-basis: 0;
+}
+.MuiGrid-item {
+    margin: 0;
+    box-sizing: border-box;
+}
+.MuiGrid-grid-xs-2 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+}
+.jss12 {
+    color: #000000;
+    margin: 0;
+    padding: 3px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.jss7 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.jss18 {
+    color: #000000;
+    font-size: 15px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.jss21 {
+    border: 2px solid #000;
+    margin-top: 18px;
+}
+.jss15 {
+    font-size: 13px;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.jss17 {
+    font-size: 13px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+
+/* PDF */
+.jspdf1 {
+    color: #000000;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+    background-color: transparent;
+}
+.jspdf2 {
+    background-color: transparent !important;
+    border: 0;
+}
+.jspdf3 {
+    border: 2px solid #000;
+    margin-top: 18px;
+}
+.jspdf4 {
+    color: #000000;
+    margin: 0;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.jspdf5 {
+    flex-grow: 0;
+    max-width: 16.666667%;
+    flex-basis: 16.666667%;
+    min-height: 3rem;
+}
+.jspdf6{
+    flex-grow: 1;
+    max-width: 100%;
+    max-width: 16.666667%;
+    flex-basis: 0;
+}
+/* PDF FIN */
+
+

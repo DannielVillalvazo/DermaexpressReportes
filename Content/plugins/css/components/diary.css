@@ -1,0 +1,98 @@
+﻿.show-Container {
+    /*display: inline;*/
+    transition: opacity 1.5s, height .5s;
+    height: 100%;
+    /*transform: rotate(180deg);*/
+}
+.hide-Container {
+    transition: opacity .7s, height .3s;
+    opacity: 0 !important;
+    height: 1px !important;
+}
+
+.button-showDetail {
+    /*animation: rotation 2s 1 linear;*/
+    transition: all .7s, height .3s;
+    transform: rotate(180deg) !important;
+}
+.button-hideDetail {
+    transition: all .7s, height .3s;
+    transform: rotate(0deg);
+}
+
+.select2-container--open .select2-dropdown {
+    z-index: 1070;
+}
+
+.select2 {
+    min-width: 15rem !important;
+}
+
+/* Tooltip container */
+.tooltipm {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+}
+.tooltipm .tiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    border-radius: 13px;
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+}
+.tooltipm .tiptext::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+}
+.tooltipm:hover .tiptext {
+    visibility: visible;
+}
+
+.tooltipm.top .tiptext{
+    margin-left: -60px;
+    bottom: 119%;
+    left: 50%;
+}
+.tooltipm.top .tiptext::after{
+    margin-left: -5px;
+    top: 100%;
+    left: 50%;
+    border-color: rgba(0, 0, 0, 0.2) transparent transparent transparent;
+}
+
+
+/* @keyframes wiggle {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+}
+.buttonStrong {
+   animation: wiggle 2s linear infinite;
+} */
