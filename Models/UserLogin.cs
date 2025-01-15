@@ -9,6 +9,8 @@ namespace dermaexpressReporte.Models
     public class UserLogin
     {
         [Required]
-        public string Nombre { get; set; } 
+        public string User { get; set; }
+        [Required]
+        public string Pass { get; set; }
     }
 }

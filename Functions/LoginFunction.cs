@@ -9,37 +9,38 @@ namespace dermaexpressReporte.Functions
 {
     public class LoginFunction
     {
-        internal static Response<UserLogin> LoginValidate(string sUser, string sPass)
+        internal static Response<Conflict> LoginValidate(string sUser, string sPass)
         {
-            Response<UserLogin> oRespuesta = new Response<UserLogin>();
+            Response<Conflict> oRespuesta = new Response<Conflict>();
             Conflict oConflict = new Conflict();
             try
             {
                 // Validar si el usuario se ingreso correctamente
                 string sPassword = string.Empty;
                 if (!Globals.DiccionarioUsuarios.TryGetValue(sUser, out sPassword))
-                {
+                {                   
                     oConflict.Description = "Favor de verificar el correo ingresado.";
-                    oConflict.Code = 400;
+                    oConflict.Code = 404;
 
                     oRespuesta.Success = false;
-                    oRespuesta.Error = oConflict;
+                    oRespuesta.Result = oConflict;
                     return oRespuesta;
                 }
                 if (sPassword != sPass)
-                {
+                {                    
                     oConflict.Description = "La contraseña ingresada es incorrecta.";
-                    oConflict.Code = 400;
+                    oConflict.Code = 404;
 
                     oRespuesta.Success = false;
-                    oRespuesta.Error = oConflict;
+                    oRespuesta.Result = oConflict;
                     return oRespuesta;
                 }
-                UserLogin sNombreUsuario = new UserLogin();
-                sNombreUsuario.Nombre = Globals.DiccionarioNombres[sUser];
+                
+                oConflict.Description = "Se ingreso correctamente al sistema";
+                oConflict.Code = 200;
 
                 oRespuesta.Success = true;
-                oRespuesta.Data = sNombreUsuario;
+                oRespuesta.Result = oConflict;
                 return oRespuesta;
             }
             catch (Exception ex)
@@ -48,7 +49,7 @@ namespace dermaexpressReporte.Functions
                 oConflict.Code = 500;
 
                 oRespuesta.Success = false;
-                oRespuesta.Error = oConflict;
+                oRespuesta.Result = oConflict;
                 return oRespuesta;
             }
         }
