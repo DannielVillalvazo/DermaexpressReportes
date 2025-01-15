@@ -381,6 +381,7 @@
     <Content Include="assets\js\charts\dashboard.js" />
     <Content Include="assets\js\charts\vectore-chart.js" />
     <Content Include="assets\js\charts\widgetcharts.js" />
+    <Content Include="assets\js\config.js" />
     <Content Include="assets\js\core\external.min.js" />
     <Content Include="assets\js\core\libs.min.js" />
     <Content Include="assets\js\dual-tone-icon-search-filter.js" />
@@ -393,6 +394,7 @@
     <Content Include="assets\js\iqonic-script\utility.js" />
     <Content Include="assets\js\iqonic-script\utility.min.js" />
     <Content Include="assets\js\login\auth.js" />
+    <Content Include="assets\js\login\authRequest.js" />
     <Content Include="assets\js\outline-icon-search-filter.js" />
     <Content Include="assets\js\plugins\360productviewer.js" />
     <Content Include="assets\js\plugins\apexcharts.js" />
@@ -424,6 +426,7 @@
     <Content Include="assets\js\setting-init.js" />
     <Content Include="assets\js\sidebar.js" />
     <Content Include="assets\js\solid-icon-search-filter.js" />
+    <Content Include="assets\js\env.js" />
     <Content Include="assets\js\sweetalert\sweetalert2%4011.js" />
     <Content Include="assets\vendor\aos\dist\aos.css" />
     <Content Include="assets\vendor\aos\dist\aos.js" />
