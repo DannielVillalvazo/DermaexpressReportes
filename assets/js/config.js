@@ -25,7 +25,7 @@ const cleanClass = () => {
  
 // Verificar la ruta y agregar el 'active' solo al enlace correspondiente
 if (currentPath.includes('/home/index') || currentPath.includes('/Home/Index') || currentPath.includes("/Home/index")) {  
-    textHeader.textContent = "Administraci\u00f3n del Reporte" 
+    textHeader.textContent = "Reporte CEDIS" 
     textDescription.textContent = "En este modulo podr\u00e1s visualizar el reporte generado por el aplicativo."
 
     reportLink.classList.add('active');

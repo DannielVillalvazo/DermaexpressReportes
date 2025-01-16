@@ -3,12 +3,20 @@
 }
 
 <main>
+
+    <style>
+        .table td, .table th {
+            word-wrap: break-word;
+            white-space: normal;
+        }
+    </style>
+
     <div class="col-sm-12">
-        <div class="card"> 
+        <div class="card">
             <div id="toolbar_Report">
 
                 <button id="refreshTable" class="btn btn-outline-primary" title="Actualizar Información"
-                        onclick="refreshData()"> 
+                        onclick="refreshData()">
 
                     <svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M4.8807 14.6713C4.74972 14.2784 4.32498 14.066 3.93202 14.197C3.53906 14.328 3.32669 14.7527 3.45768 15.1457L4.8807 14.6713ZM20.8807 15.1457C21.0117 14.7527 20.7993 14.328 20.4064 14.197C20.0134 14.066 19.5887 14.2784 19.4577 14.6713L20.8807 15.1457ZM4.16919 14.9085C3.45768 15.1457 3.45779 15.146 3.45791 15.1464C3.45796 15.1465 3.45809 15.1469 3.45819 15.1472C3.45839 15.1478 3.45862 15.1485 3.45889 15.1493C3.45942 15.1509 3.46007 15.1528 3.46086 15.1551C3.46242 15.1597 3.4645 15.1657 3.4671 15.1731C3.47229 15.188 3.47955 15.2084 3.48896 15.2341C3.50776 15.2854 3.53515 15.3576 3.57164 15.4477C3.64455 15.6279 3.75414 15.8805 3.90462 16.1814C4.20474 16.7817 4.67217 17.5836 5.34302 18.3886C6.68936 20.0043 8.88337 21.6585 12.1692 21.6585V20.1585C9.45501 20.1585 7.64902 18.8128 6.49536 17.4284C5.91621 16.7334 5.50864 16.0354 5.24626 15.5106C5.11549 15.2491 5.02195 15.0329 4.96206 14.8849C4.93214 14.811 4.91069 14.7543 4.89727 14.7177C4.89056 14.6994 4.88587 14.6861 4.88312 14.6783C4.88175 14.6744 4.88087 14.6718 4.88047 14.6706C4.88027 14.67 4.88019 14.6698 4.88023 14.6699C4.88025 14.67 4.88029 14.6701 4.88037 14.6704C4.88041 14.6705 4.8805 14.6707 4.88052 14.6708C4.88061 14.671 4.8807 14.6713 4.16919 14.9085ZM12.1692 21.6585C15.455 21.6585 17.649 20.0043 18.9954 18.3886C19.6662 17.5836 20.1336 16.7817 20.4338 16.1814C20.5842 15.8805 20.6938 15.6279 20.7667 15.4477C20.8032 15.3576 20.8306 15.2854 20.8494 15.2341C20.8588 15.2084 20.8661 15.188 20.8713 15.1731C20.8739 15.1657 20.876 15.1597 20.8775 15.1551C20.8783 15.1528 20.879 15.1509 20.8795 15.1493C20.8798 15.1485 20.88 15.1478 20.8802 15.1472C20.8803 15.1469 20.8804 15.1465 20.8805 15.1464C20.8806 15.146 20.8807 15.1457 20.1692 14.9085C19.4577 14.6713 19.4578 14.671 19.4579 14.6708C19.4579 14.6707 19.458 14.6705 19.458 14.6704C19.4581 14.6701 19.4581 14.67 19.4582 14.6699C19.4582 14.6698 19.4581 14.67 19.4579 14.6706C19.4575 14.6718 19.4566 14.6744 19.4553 14.6783C19.4525 14.6861 19.4478 14.6994 19.4411 14.7177C19.4277 14.7543 19.4062 14.811 19.3763 14.8849C19.3164 15.0329 19.2229 15.2491 19.0921 15.5106C18.8297 16.0354 18.4222 16.7334 17.843 17.4284C16.6894 18.8128 14.8834 20.1585 12.1692 20.1585V21.6585Z"
@@ -31,26 +39,26 @@
                            data-show-columns-toggle-all="true" data-show-export="true" data-click-to-select="true"
                            data-detail-formatter="detailFormatter" data-minimum-count-columns="2"
                            data-pagination="true" data-id-field="id" data-page-list="[10, 25, 50, 100, all]"
-                           data-remember-order="true" data-toolbar="#toolbar_Report" 
+                           data-remember-order="true" data-toolbar="#toolbar_Report"
                            data-auto-refresh="true" data-fixed-scroll="true" data-height="660">
                         <thead>
                             <tr>
-                                <th data-field="SKU" data-sortable="true" >SKU </th>
+                                <th data-field="SKU" data-sortable="true">SKU </th>
                                 <th data-field="CodigoSAP" data-sortable="true">Código SAP</th>
-                                <th data-field="Descripcion" data-sortable="true" >Descripción</th>
+                                <th data-field="Descripcion" data-sortable="true">Descripción</th>
                                 <th data-field="Fabricante" data-sortable="true">Fabricante</th>
                                 <th data-field="Marca" data-sortable="true">Marca</th>
                                 <th data-field="DisponibleGDL" data-sortable="true">Almacén GDL</th>
                                 <th data-field="DisponibleCDMX" data-sortable="true">Almacén CDMX</th>
                                 <th data-field="DisponibleMTY" data-sortable="true">Almacén MTY</th>
-                                <th data-field="DisponibleSLT" data-sortable="true">Almacén SALT</th> 
+                                <th data-field="DisponibleSLT" data-sortable="true">Almacén SALT</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </main>
 
   
